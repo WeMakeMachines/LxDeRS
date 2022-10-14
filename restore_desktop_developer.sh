@@ -16,7 +16,9 @@ echo "                          �
 echo "$DIV LxDERS Linux Desktop Environment Restoration Script"
 
 echo "$DIV To setup your GIT credentials we need some details"
-read -p "$DIV Please enter the e-mail you want to associate with GIT > " GIT_EMAIL
+echo "$DIV Please enter the e-mail you want to associate with GIT"
+read -p "$DIV > " GIT_EMAIL
+echo "$DIV Please enter the full name you want to associate with GIT"
 read -p "$DIV Please enter the full name you want to associate with GIT > " GIT_NAME
 
 echo "$DIV Performing necessary system update / upgrade"
