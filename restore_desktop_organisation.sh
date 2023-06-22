@@ -1,19 +1,15 @@
 #!/bin/bash
 # LxDERS
-# LINUX DESKTOP ENVIRONMENT RESTORATION SCRIPT
 # ORGANISATION TOOLS
-# FOR UBUNTU FLAVOURED DISTRIBUTIONS
-# WARNING! EXPECTS DEVELOPER
 
-DIV="\n\n███████ "
-
+echo ""
 echo "██      ██   ██ ██████  ███████ ██████  ███████ "
-echo "██       ██ ██  ██   ██ ██      ██   ██ ██      ``"
+echo "██       ██ ██  ██   ██ ██      ██   ██ ██      "
 echo "██        ███   ██   ██ █████   ██████  ███████ "
 echo "██       ██ ██  ██   ██ ██      ██   ██      ██ "
 echo "███████ ██   ██ ██████  ███████ ██   ██ ███████ "
-echo "                                                "
-echo "$DIV LxDERS Linux Desktop Environment Restoration Script"
+echo ""
+echo "LxDERS Linux Desktop Environment Restoration Script"
 
 echo "Add global npm packages"
 npm i -g reveal-md
