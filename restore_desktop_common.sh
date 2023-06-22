@@ -21,18 +21,21 @@ sudo apt install flatpak -y
 sudo apt install plasma-discover-backend-flatpak -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Apps
-echo "Installing core system applications"
-sudo apt-get install network-manager-openvpn -y
+# system
+echo "Installing system applications"
+sudo apt-get install network-manager-openvpn htop -y
 
-echo "Installing common apps"
-sudo apt-get install gnome-disk-utility clementine htop dict dosbox -y
+# tools
+echo "Installing popular light tools"
+sudo apt-get install gnome-disk-utility dict keepassxc barrier -y
 
-echo "Installing browsers, chromium"
+# fun
+echo "Installing fun"
+sudo apt-get install clementine dosbox -y
+
+# apps
+echo "Installing apps"
 sudo apt-get install chromium-browser -y
-
-echo "Installing keepassxc"
-sudo apt-get install keepassxc -y
 
 echo "Installing inkscape"
 sudo snap install inkscape
@@ -42,13 +45,6 @@ JOPLIN_RELEASE_VERSION=$(wget -qO - "https://api.github.com/repos/laurent22/jopl
 wget -O "Joplin.AppImage" "https://github.com/laurent22/joplin/releases/download/v${JOPLIN_RELEASE_VERSION}/Joplin-${JOPLIN_RELEASE_VERSION}.AppImage"
 mkdir ~/Applications/
 mv Joplin.AppImage ~/Applications/
-
-echo "Installing dict"
-echo "Installing dict"
-sudo apt-get install dict -y
-
-echo "Installing barrier"
-sudo apt-get install barrier -y
 
 # Remove unneeded packages
 sudo apt-get autoremove
