@@ -43,18 +43,10 @@ done
 
 # Modify BASH shell
 cat << EOF >> ~/.bashrc
-
-###
-# Added by LxDERS
-###
-
-# All python commands get relayed to python3
-alias python='python3'
+# Added by LxDERS ssh_keys
 
 # Target all private SSH keys
 $SSH_KEYS
 
-###
-# End of LxDERS additions
-###
+# LxDERS end
 EOF

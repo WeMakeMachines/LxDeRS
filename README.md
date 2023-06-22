@@ -1,50 +1,49 @@
 # LxDERS
 
-Linux Desktop Restoration Scripts (Ubuntu / Kubuntu 22.04)
+Linux Desktop Restoration Scripts (Ubuntu / Kubuntu)
 
-## Restore Common Desktop Requirements
+## Installation
+
+### Install Common Desktop Apps
 
 Installs common apps and tools for the naked OS
 
 ```bash
-wget https://raw.githubusercontent.com/WeMakeMachines/LxDERS/master/restore_desktop_common.sh
-sudo chmod +x ./restore_desktop_common.sh
-./restore_desktop_common.sh
+wget https://raw.githubusercontent.com/WeMakeMachines/LxDERS/master/install_desktop_common.sh
+sudo chmod +x ./install_desktop_common_apps.sh
+./install_desktop_common_apps.sh
 ```
 
-## Restore Developer Desktop Requirements
+### Install Developer Desktop Apps
 
 Sets up the OS with common developer tools
 
-Highlights:
-- Install and configure GIT
 - IDEs: Wesbtorm and Pycharm-community
 - Installs insomnia
 - Installs node, npm (via n)
 - Installs npm packages, nodemon, prettier
-- Setup SSH keys in `.bashrc`
-- Alias python to python3 command
 
 ```bash
 wget https://raw.githubusercontent.com/WeMakeMachines/LxDERS/master/restore_desktop_developer.sh
-sudo chmod +x ./restore_desktop_developer.sh
-./restore_desktop_developer.sh
+sudo chmod +x ./install_desktop_developer_apps.sh
+./install_desktop_developer_apps.sh
 ```
 
-## Restore Organisational Desktop Requirements
+### Install Organisational Desktop Apps
 
 Tools needed commonly by organisations
 
-Highlights:
 - Installs slack, zoom 🤮
 
 ```bash
 wget https://github.com/WeMakeMachines/LxDERS/blob/master/restore_desktop_organisation.sh
-sudo chmod +x ./restore_desktop_organisation.sh
-./restore_desktop_organisation.sh
+sudo chmod +x ./install_desktop_organisation_apps.sh
+./install_desktop_organisation_apps.sh
 ```
 
-## Setup Firefox
+## Setup
+
+### Setup Firefox
 
 Removes firefox snap, and installs firefox from the PPA, sets up firefox extensions
 
@@ -54,7 +53,7 @@ sudo chmod +x ./setup_firefox_esr.sh
 ./setup_firefox_esr.sh
 ```
 
-## Setup SSH Keys
+### Setup SSH Keys
 
 Scans the `~/.ssh` folder for SSH keys, modifies permissions and adds them to the `~/.bashrc` file
 
@@ -62,4 +61,24 @@ Scans the `~/.ssh` folder for SSH keys, modifies permissions and adds them to th
 wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_ssh_keys.sh
 sudo chmod +x ./setup_ssh_keys.sh
 ./setup_ssh_keys.sh
+```
+
+### Setup GIT
+
+Installs and configures GIT
+
+```bash
+wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_git.sh
+sudo chmod +x ./setup_git.sh
+./setup_git.sh
+```
+
+### Setup bash
+
+Customise bash
+
+```bash
+wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_bash.sh
+sudo chmod +x ./setup_bash.sh
+./setup_bash.sh
 ```
