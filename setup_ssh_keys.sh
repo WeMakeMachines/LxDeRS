@@ -1,18 +1,21 @@
 #!/bin/bash
 # LxDERS
-# LINUX DESKTOP ENVIRONMENT RESTORATION SCRIPT
-# SET CORRECT SSH KEY PERMISSIONS
-# FOR UBUNTU FLAVOURED DISTRIBUTIONS
+# MODIFY SSH KEY PERMISSIONS
+# SETUP BASH TO LOAD SSH KEYS
+# ~/.ssh
 
-DIV="\n\n███████ "
-
+echo ""
 echo "██      ██   ██ ██████  ███████ ██████  ███████ "
 echo "██       ██ ██  ██   ██ ██      ██   ██ ██      ``"
 echo "██        ███   ██   ██ █████   ██████  ███████ "
 echo "██       ██ ██  ██   ██ ██      ██   ██      ██ "
 echo "███████ ██   ██ ██████  ███████ ██   ██ ███████ "
 echo "                                                "
-echo "$DIV LxDERS Linux Desktop Environment Restoration Script"
+echo ""
+
+# Modify SSH key permissions
+
+echo "Modifying SSH key permissions..."
 
 SEARCH_SSH_PRIVATE_KEYS=`find ~/.ssh -type f \( ! -iname "*.pub" ! -iname "known_hosts*"  \)`
 for SSH_KEY in $SEARCH_SSH_PRIVATE_KEYS
@@ -27,3 +30,31 @@ sudo chmod 644 $SSH_KEY
 done
 
 sudo chmod 700 ~/.ssh
+
+# Modify bash shell
+
+echo "Setting up SSH keys..."
+SSH_KEYS="ssh-add "
+SEARCH_SSH_KEYS=`find ~/.ssh -type f \( ! -iname "*.pub" ! -iname "known_hosts*"  \)`
+for SSH_KEY in $SEARCH_SSH_KEYS
+do
+SSH_KEYS+="$SSH_KEY "
+done
+
+# Modify BASH shell
+cat << EOF >> ~/.bashrc
+
+###
+# Added by LxDERS
+###
+
+# All python commands get relayed to python3
+alias python='python3'
+
+# Target all private SSH keys
+$SSH_KEYS
+
+###
+# End of LxDERS additions
+###
+EOF

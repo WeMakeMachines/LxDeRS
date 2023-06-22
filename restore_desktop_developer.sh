@@ -50,31 +50,5 @@ echo "Add global npm packages"
 npm i -g prettier
 npm i -g nodemon
 
-echo "Setting up SSH keys..."
-SSH_KEYS="ssh-add "
-SEARCH_SSH_KEYS=`find ~/.ssh -type f \( ! -iname "*.pub" ! -iname "known_hosts*"  \)`
-for SSH_KEY in $SEARCH_SSH_KEYS
-do
-SSH_KEYS+="$SSH_KEY "
-done
-
-# Modify BASH shell
-cat << EOF >> ~/.bashrc
-
-###
-# Added by LxDERS
-###
-
-# All python commands get relayed to python3
-alias python='python3'
-
-# Target all private SSH keys
-$SSH_KEYS
-
-###
-# End of LxDERS additions
-###
-EOF
-
 # Remove unneeded packages
 sudo apt-get autoremove

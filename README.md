@@ -46,10 +46,20 @@ sudo chmod +x ./restore_desktop_organisation.sh
 
 ## Setup Firefox
 
-Removed firefox snap, and installs firefox from the PPA, sets up firefox extensions
+Removes firefox snap, and installs firefox from the PPA, sets up firefox extensions
 
 ```bash
 wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_firefox_esr.sh
 sudo chmod +x ./setup_firefox_esr.sh
 ./setup_firefox_esr.sh
+```
+
+## Setup SSH Keys
+
+Scans the `~/.ssh` folder for SSH keys, modifies permissions and adds them to the `~/.bashrc` file
+
+```bash
+wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_ssh_keys.sh
+sudo chmod +x ./setup_ssh_keys.sh
+./setup_ssh_keys.sh
 ```
