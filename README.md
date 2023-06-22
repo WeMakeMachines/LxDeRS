@@ -9,9 +9,7 @@ Linux Desktop Restoration Scripts (Ubuntu / Kubuntu)
 Installs common apps and tools for the naked OS
 
 ```bash
-wget https://raw.githubusercontent.com/WeMakeMachines/LxDERS/master/install_desktop_common.sh
-sudo chmod +x ./install_desktop_common_apps.sh
-./install_desktop_common_apps.sh
+wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/install_desktop_common_apps.sh -O - | sh
 ```
 
 ### Install Developer Desktop Apps
@@ -24,9 +22,7 @@ Sets up the OS with common developer tools
 - Installs npm packages, nodemon, prettier
 
 ```bash
-wget https://raw.githubusercontent.com/WeMakeMachines/LxDERS/master/restore_desktop_developer.sh
-sudo chmod +x ./install_desktop_developer_apps.sh
-./install_desktop_developer_apps.sh
+wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/install_desktop_developer_apps.sh -O - | sh
 ```
 
 ### Install Organisational Desktop Apps
@@ -36,9 +32,7 @@ Tools needed commonly by organisations
 - Installs slack, zoom 🤮
 
 ```bash
-wget https://github.com/WeMakeMachines/LxDERS/blob/master/restore_desktop_organisation.sh
-sudo chmod +x ./install_desktop_organisation_apps.sh
-./install_desktop_organisation_apps.sh
+wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/install_desktop_organisation_apps.sh -O - | sh
 ```
 
 ## Setup
@@ -48,9 +42,7 @@ sudo chmod +x ./install_desktop_organisation_apps.sh
 Removes firefox snap, and installs firefox from the PPA, sets up firefox extensions
 
 ```bash
-wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_firefox_esr.sh
-sudo chmod +x ./setup_firefox_esr.sh
-./setup_firefox_esr.sh
+wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/setup_firefox_esr.sh -O - | sh
 ```
 
 ### Setup SSH Keys
@@ -58,9 +50,7 @@ sudo chmod +x ./setup_firefox_esr.sh
 Scans the `~/.ssh` folder for SSH keys, modifies permissions and adds them to the `~/.bashrc` file
 
 ```bash
-wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_ssh_keys.sh
-sudo chmod +x ./setup_ssh_keys.sh
-./setup_ssh_keys.sh
+wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/setup_ssh_keys.sh -O - | sh
 ```
 
 ### Setup GIT
@@ -68,9 +58,7 @@ sudo chmod +x ./setup_ssh_keys.sh
 Installs and configures GIT
 
 ```bash
-wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_git.sh
-sudo chmod +x ./setup_git.sh
-./setup_git.sh
+wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/setup_git.sh -O - | sh
 ```
 
 ### Setup bash
@@ -78,7 +66,5 @@ sudo chmod +x ./setup_git.sh
 Customise bash
 
 ```bash
-wget https://github.com/WeMakeMachines/LxDERS/blob/master/setup_bash.sh
-sudo chmod +x ./setup_bash.sh
-./setup_bash.sh
+wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/setup_bash.sh -O - | sh
 ```
