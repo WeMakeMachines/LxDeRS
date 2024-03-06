@@ -17,9 +17,8 @@ wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/install_desk
 Sets up the OS with common developer tools
 
 - IDEs: Wesbtorm and Pycharm-community
-- Installs insomnia
 - Installs node, npm (via n)
-- Installs npm packages, nodemon, prettier
+- Installs npm packages, prettier
 
 ```bash
 wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/install_desktop_developer_apps.sh -O - | sh
@@ -29,7 +28,7 @@ wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/install_desk
 
 Tools needed commonly by organisations
 
-- Installs slack, zoom 🤮
+- Installs slack
 
 ```bash
 wget https://raw.githubusercontent.com/WeMakeMachines/LxDeRS/master/install_desktop_organisation_apps.sh -O - | sh

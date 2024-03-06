@@ -23,16 +23,11 @@ echo "Installing IDEs"
 sudo snap install webstorm --classic
 sudo snap install pycharm-community --classic
 
-echo "Installing Insomnia"
-curl -o insomnia.deb -L https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website
-sudo apt install ./insomnia.deb -y
-
 echo "Installing n, node, npm"
 curl -L https://git.io/n-install | bash
 
 echo "Add global npm packages"
 npm i -g prettier
-npm i -g nodemon
 
 # Remove unneeded packages
 sudo apt-get autoremove
