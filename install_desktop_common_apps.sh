@@ -38,7 +38,9 @@ echo "Installing apps"
 sudo apt-get install chromium-browser -y
 
 echo "Installing inkscape"
-sudo snap install inkscape
+sudo add-apt-repository ppa:inkscape.dev/stable
+sudo apt update
+sudo apt install inkscape
 
 echo "Installing Joplin"
 JOPLIN_RELEASE_VERSION=$(wget -qO - "https://api.github.com/repos/laurent22/joplin/releases/latest" | grep -Po '"tag_name": ?"v\K.*?(?=")')
