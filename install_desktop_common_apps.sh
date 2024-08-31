@@ -27,7 +27,13 @@ sudo apt-get install network-manager-openvpn htop -y
 
 # tools
 echo "Installing popular light tools"
-sudo apt-get install gnome-disk-utility dict keepassxc barrier -y
+sudo apt-get install gnome-disk-utility keepassxc barrier -y
+
+# dict
+sudo apt-get install dict -y
+echo '# Added by LxDERS' >> ~/.bashrc
+echo 'alias dict-de="dict -d fd-deu-eng"' >> ~/.bashrc
+echo '# LxDERS' >> ~/.bashrc
 
 # fun
 echo "Installing fun"
